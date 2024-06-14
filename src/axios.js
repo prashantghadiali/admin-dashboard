@@ -19,8 +19,8 @@ axiosInstance.interceptors.request.use(
         } else {
             const accessToken = JSON.parse(localStorage.getItem('auth'))?.access_token;
             if (accessToken) {
-                // config.headers['Authorization'] = `Bearer ${accessToken}`;
-                config.headers["x-access-token"] = accessToken;
+                config.headers['Authorization'] = `Bearer ${accessToken}`;
+                // config.headers["x-access-token"] = accessToken;
             }
         }
         return config;
@@ -64,7 +64,8 @@ axiosInstance.interceptors.response.use(
                 let auth = JSON.parse(localStorage.getItem('auth'));
                 auth = {...auth, access_token: res.data.access_token};
                 localStorage.setItem("auth", JSON.stringify(auth));
-                axiosInstance.defaults.headers.common["x-access-token"] = res.data.access_token;
+                // axiosInstance.defaults.headers.common["x-access-token"] = res.data.access_token;
+                axiosInstance.defaults.headers.common["Authorization"] = `Bearer ${res.data.access_token}`;
 
                 return axiosInstance(originalRequest);
             } catch (error) {

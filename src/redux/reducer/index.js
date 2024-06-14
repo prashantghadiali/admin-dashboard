@@ -1,9 +1,11 @@
 import {combineReducers} from "redux";
 import alert from './alert';
+import faqs from "./faq";
 
 
 const appReducer = combineReducers({
-    alert
+    alert,
+    faqs
 })
 
 const rootReducer = (state, action) => {

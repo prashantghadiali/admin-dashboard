@@ -12,7 +12,8 @@ import {setAlert} from './alert';
 // User Login
 export const authLogin = (data, navigate) => async (dispatch) => {
     try {
-        const res = await axios.post('admin/login', data);
+        // const res = await axios.post('admin/login', data);
+        const res = await axios.post('/auth/login', data);
         console.log(res);
 
         if (res.data.code === 1) {

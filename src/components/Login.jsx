@@ -21,8 +21,8 @@ import { useNavigate } from 'react-router-dom';
 import { authLogin } from "../redux/action/authentication";
 
 const schema = yup.object().shape({
-  mobile: yup.number().required("Mobile number is required"),
-  password: yup.string().required("Password is required")
+    mobile_number: yup.number().required("Mobile number is required"),
+    password: yup.string().required("Password is required")
 });
 
 const Login = () => {
@@ -52,9 +52,12 @@ const Login = () => {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
+              bgcolor: 'secondary.main',
+              padding:'2vh',
+              borderRadius:'9px'
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+          <Avatar sx={{ m: 1 }}>
             <LockOutlined />
           </Avatar>
           <Typography component="h1" variant="h5">
@@ -64,26 +67,24 @@ const Login = () => {
             <TextField
               margin="normal"
               fullWidth
-              id="mobile"
+              id="mobile_number"
               label="Mobile Number"
-              name="mobile"
-              autoComplete="mobile"
+              autoComplete="mobile_number"
               autoFocus
               type="number"
-              error={!!errors.mobile}
-              helperText={errors.mobile ? errors.mobile.message : ''}
-              {...register("mobile")}
+              error={!!errors.mobile_number}
+              helperText={errors.mobile_number?.message || ''}
+              {...register("mobile_number")}
             />
             <TextField
               margin="normal"
               fullWidth
-              name="password"
               label="Password"
               type={showPassword ? "text" : "password"}
               id="password"
               autoComplete="current-password"
               error={!!errors.password}
-              helperText={errors.password ? errors.password.message : ''}
+              helperText={errors.password?.message || ''}
               {...register("password")}
               InputProps={{
                 endAdornment: (
