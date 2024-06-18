@@ -25,10 +25,8 @@ const FAQ = () => {
   const [openUpdate, setOpenUpdate] = useState(false);
   const [selectedFaq, setSelectedFaq] = useState(null);
 
-  let count = 0
   useEffect(() => {
     dispatch(getFaqs()); // Fetch FAQs on component mount
-    console.log("count :", count+1);
   }, [dispatch]);
 
 

@@ -19,6 +19,8 @@ import Form from "./scenes/form";
 import Line from "./scenes/line";
 import Pie from "./scenes/pie";
 import FAQ from "./scenes/faq";
+import OurClients from "./scenes/ourclients";
+import Job from "./scenes/job";
 import Geography from "./scenes/geography";
 import Calendar from "./scenes/calendar/calendar";
 import Login from "./components/Login";
@@ -74,7 +76,7 @@ function App({ children, pageName = "" }) {
                 {!isLoginPage && <Topbar setIsSidebar={setIsSidebar} />}
                 
                 {!isLoginPage && (
-                  <Breadcrumbs aria-label="breadcrumb" style={{ margin: '16px 0' }}>
+                  <Breadcrumbs aria-label="breadcrumb" style={{ margin: '16px 20px 0' }}>
                     <Link component={NavLink} to="/dashboard">
                       Home
                     </Link>
@@ -160,6 +162,22 @@ function App({ children, pageName = "" }) {
                     element={
                       <ProtectedRoute>
                         <FAQ />
+                      </ProtectedRoute>
+                    }
+                  />
+                  <Route
+                    path="/job"
+                    element={
+                      <ProtectedRoute>
+                        <Job />
+                      </ProtectedRoute>
+                    }
+                  />
+                  <Route
+                    path="/ourClients"
+                    element={
+                      <ProtectedRoute>
+                        <OurClients />
                       </ProtectedRoute>
                     }
                   />

@@ -1,11 +1,13 @@
 import {combineReducers} from "redux";
 import alert from './alert';
 import faqs from "./faq";
+import jobs from "./job";
 
 
 const appReducer = combineReducers({
     alert,
-    faqs
+    faqs,
+    jobs
 })
 
 const rootReducer = (state, action) => {

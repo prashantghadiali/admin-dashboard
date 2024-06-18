@@ -8,8 +8,13 @@ export const AUTH_LOGOUT = 'AUTH_LOGOUT';
 export const AUTH_ERROR = 'AUTH_ERROR';
 
 
-//RUPAY
+//FAQ
 export const GET_FAQS = "GET_FAQS"
-export const GET_FAQ = "GET_FAQ"
 export const UPDATE_FAQ = "UPDATE_FAQ"
 export const ADD_FAQ = "ADD_FAQ"
+
+//JOBS
+export const GET_JOBS = "GET_JOBS"
+export const ADD_JOBS = "ADD_JOB"
+export const UPDATE_JOBS = "UPDATE_JOB"
+export const REMOVE_JOB = "REMOVE_JOB"

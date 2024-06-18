@@ -16,6 +16,7 @@ import PieChartOutlineOutlinedIcon from "@mui/icons-material/PieChartOutlineOutl
 import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
+import { IoBusiness, IoPersonAdd } from "react-icons/io5";
 
 const Item = ({ title, to, icon, selected, setSelected }) => {
   const theme = useTheme();
@@ -179,6 +180,20 @@ const Sidebar = () => {
               title="FAQ Page"
               to="/faq"
               icon={<HelpOutlineOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="Clients"
+              to="/ourClients"
+              icon={<IoBusiness  />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="Job Opportunity"
+              to="/job"
+              icon={<IoPersonAdd  />}
               selected={selected}
               setSelected={setSelected}
             />
