@@ -18,3 +18,10 @@ export const GET_JOBS = "GET_JOBS"
 export const ADD_JOBS = "ADD_JOB"
 export const UPDATE_JOBS = "UPDATE_JOB"
 export const REMOVE_JOB = "REMOVE_JOB"
+
+
+// Clients
+export const GET_CLIENTS = "GET_CLIENTS"
+export const ADD_CLIENTS = "ADD_CLIENTS"
+export const UPDATE_CLIENTS = "UPDATE_CLIENTS"
+export const REMOVE_CLIENT = "REMOVE_CLIENT"

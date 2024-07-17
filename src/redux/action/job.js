@@ -6,7 +6,6 @@ import { setAlert } from './alert';
 export const getJobs = () => async (dispatch) => {
     try {
         const res = await axios.get("/v1/job/all");
-        console.log("JObs data",res.data);
         if (res.data.code === 1) {
             dispatch({type: GET_JOBS, payload: res.data.data});
         }
